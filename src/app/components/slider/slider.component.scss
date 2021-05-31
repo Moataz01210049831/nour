@@ -1,0 +1,37 @@
+.carousel-caption{
+    bottom: 7.25rem !important;
+    p{
+        font-size: 32px;
+    width: 64%;
+    margin-left: 17%;
+    }
+    h5{
+        font-size: 60px;
+    }
+    .bts{
+        background-color: #8DC043;
+    color: white;
+    }
+}
+.carousel-indicators{
+    button{
+        width: 14px;
+        height: 14px;
+        border-radius: 100%;
+    }
+    .active{
+        width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    }
+}
+
+.carousel-control-next-icon {
+    background-color: #ffffffba;
+   border-radius: 4px;
+}
+
+.carousel-control-prev-icon {
+    background-color: #ffffffba;
+   border-radius: 4px;
+}

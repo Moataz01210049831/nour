@@ -7,7 +7,47 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
 </head>
+<style>
+  .ngx-pagination li {
+    display: inline-block;
+    margin-left: 10px;
+}
+    .ngx-pagination  .current {
+            padding: 0.1875rem 0.625rem;
+            background: #8dc043 !important;
+            color: #fefefe;
+            cursor: default;
+            border-radius: 5px;
+        }
+        .ngx-pagination a:hover, .ngx-pagination button:hover {
+            background: #ffffff !important;
+            border-radius: 5px;
+        }
+        .ngx-pagination a {
+          background: #ffffff !important;
+            border-radius: 5px !important;
+        }
+        .ngx-pagination .disabled {
+    padding: 0.1875rem 0.625rem;
+    color: #cacaca;
+    cursor: default;
+    background-color: white !important;
+    border-radius: 5px !important;
+}
+
+.ngx-pagination .pagination-previous a::before, .ngx-pagination .pagination-previous.disabled::before {
+    content: '<' !important;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+.ngx-pagination .pagination-next a::after, .ngx-pagination .pagination-next.disabled::after {
+    content: '>' !important;
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+</style>
 <body>
   <app-root></app-root>
 </body>

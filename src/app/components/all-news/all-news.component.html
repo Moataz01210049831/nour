@@ -1,0 +1,155 @@
+<div class="all">
+  <div class="container">
+    <app-ng-dynamic-breadcrumb [symbol]="breadcrumbConfig['symbol']"  [bgColor]="breadcrumbConfig['bgColor']" [fontSize]="breadcrumbConfig['fontSize']" [fontColor]="breadcrumbConfig['fontColor']" [lastLinkColor]="breadcrumbConfig['lastLinkColor']" ></app-ng-dynamic-breadcrumb>
+   
+  
+  </div>
+
+  <div class="container">
+    <h4>
+      News
+    </h4>
+
+
+   <div class="row">
+     <div class="col-md-2">
+      <div class="form-group">
+        <label >From</label>
+        <input type="date" placeholder="Select" class="textbox-n" type="text" onfocus="(this.type='date')" id="date" class="form-control"  id="datefrom" 
+         [(ngModel)]="myDateValue" >
+
+       
+      
+      </div>
+      
+
+     </div>
+
+     <div class="col-md-2">
+      <div class="form-group">
+        <label >To</label>
+        <input type="date" placeholder="Select" class="textbox-n" type="text" onfocus="(this.type='date')" id="date" class="form-control"  id="dateto"  class="form-control"
+        
+         [(ngModel)]="toDate" >
+      
+      </div>
+
+     </div>
+     <div class="col-md-2">
+      <div class="form-group">
+        <label for="exampleSelect1"> Category</label>
+        <select class="form-control" [(ngModel)]="categoryselect" name="Category" #category="ngModel">
+          <option  [ngValue]="undefined" disabled selected>Select</option> 
+          <option *ngFor="let cat of categories" value="{{cat.id}}">{{cat.name}}</option>
+        
+        </select>
+          
+      </div>
+
+     </div>
+
+     <div class="col-md-5">
+        <div class="input-group">
+            <div class="form-outline">
+            
+              <label class="form-label" for="form1"></label>
+              <input type="text" class="form-control input" [(ngModel)]="title" placeholder="Search Services"/>
+            </div>
+            <button type="button" class="btn btn-primary" (click)="filterDate()">
+              
+              <fa-icon [icon]="['fas', 'search']" size="" style="color: #ffffff;"></fa-icon>
+          
+            </button>
+        </div>
+     
+     
+     </div>
+     <div class="col-md-1">
+       
+      <div class="sortby" >
+        <span (click)="showmenu()">
+          Sortby 
+          <fa-icon [icon]="['fas', 'sort']" size="" style=""></fa-icon>
+        </span>
+        <ul class="list-unstyled" id="sortdata">
+          <li (click)="sortdata()">
+            A-Z
+          </li>
+          <li (click)="sortdata2()">
+            Z-A
+          </li>
+        </ul>
+
+      
+      </div>
+     </div>
+
+
+   </div>
+<!-- ======== start news row  -->
+
+
+<div class="row news">
+  <ng-container  *ngFor="let item of duplicateArray | paginate: { itemsPerPage: 10, currentPage: p }">
+
+  
+  <div class="col-md-4 col-12" >
+    <div class="card"  >
+      <img src="{{item.urlToImage}}" class="card-img-top" alt="..." (click)="goto([item.id])">
+      <div class="card-body">
+        <div style="text-align: right;">
+          <span  (click)="addtowishlist([item.id])">
+
+         
+          <svg xmlns="http://www.w3.org/2000/svg" *ngIf="nameval==true || allwish.indexOf(item.id | json) == -1" width="16" 
+          height="16" fill="#8DC043" class="bi bi-heart-fill" viewBox="0 0 16 16"  style="margin-right: 20px">
+            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+          </svg>
+       
+          <svg xmlns="http://www.w3.org/2000/svg" *ngIf="nameval==false && allwish.indexOf(item.id | json) !== -1"  width="16" height="16" fill="#8DC043"  style="margin-right: 20px" class="bi bi-heart-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+          </svg>
+        </span>
+
+
+          <fa-icon [icon]="['fas', 'share-alt']" size=""  style="margin-right: 20px;color: #8DC043;"></fa-icon>
+       
+        </div>
+        <h5 class="card-title">{{item.title}}</h5>
+        <ul class="list-unstyled" *ngFor="let cat of categories">
+          <li *ngIf="item.sourceID ==cat.id">
+            <a>
+              {{cat.name}}
+            </a>
+          </li>
+        
+        </ul>
+        <p class="card-text">
+          {{item.description}}
+        </p>
+        <div class="date">
+          
+          <fa-icon [icon]="['fas', 'calendar']" size="" style="margin-right: 10px;"></fa-icon>
+          <span>
+            {{item.publishedAt}}
+          </span>
+        
+        </div>
+      </div>
+    </div>
+
+  </div>
+</ng-container>
+</div>
+
+
+<div class="pag">
+  
+<pagination-controls (pageChange)="p = $event"  previousLabel=""
+nextLabel=""></pagination-controls>
+
+</div>
+   <!-- ====end of all page  -->
+  </div>
+</div>
+

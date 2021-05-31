@@ -1,0 +1,58 @@
+.section{
+    padding: 2% 0;
+    .view{
+        text-align: right;
+        span{
+            color: #8DC043 !important;
+            cursor: pointer;
+            fa-icon{
+                color: #8DC043 !important;
+            }
+        }
+    }
+    .news{
+        margin-top: 1%;
+        .card{
+            margin-bottom: 20px;
+            min-height: 580px;
+            position: relative;
+            box-shadow: 0px 0px 10px 0px #ccc7c7;
+            img{
+                height: 220px;
+            }
+        }
+        .card-title{
+            font-size: 28px;
+        }
+        .card-text{
+            color: #565960;
+            font-size: 16px;
+           
+            text-align: justify;
+        }
+        ul{
+            display: inline-flex;
+            li{
+                margin-right: 10px;
+                a{
+                    background-color: #E3E3E3;
+                    border-radius: 7px;
+                    font-size: 12px;
+                    padding: 3px 9px;
+                    text-decoration: none;
+                }
+            }
+        }
+        .date{
+            position: absolute;
+            bottom: 11px;
+            fa-icon{
+                color: #8DC043 !important; 
+            }
+            span{
+                font-size: 12px;
+             font-weight: 600;
+            }
+        }
+    }
+}

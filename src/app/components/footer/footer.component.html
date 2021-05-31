@@ -1,0 +1,120 @@
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 col-12">
+        <ul class="list-unstyled">
+          <li>
+            <a href="">
+              News
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Events
+            </a>
+          </li>
+          <li>
+            <a href="">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="">
+              FAQs
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="col-md-3 col-12">
+        <ul class="list-unstyled">
+          <li>
+            <a href="">
+              Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Contact Us
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Complains
+            </a>
+          </li>
+         
+
+        </ul>
+
+      </div>
+      <div class="col-md-4 col-12">
+        <div class="subscribe">
+          <h5>
+            Subscribe to Newsletter
+          </h5>
+          <form (ngSubmit)="f.form.valid && onSubmit(f)" #f="ngForm" novalidate>
+            <input required type="text" class="" ngModel #email="ngModel" id="email" name="email" placeholder="Email Address" required>
+         
+            <button type="submit" class="" expand="block">
+              Subscribe
+          </button>
+          <div *ngIf="f.submitted && email.invalid">
+            <div *ngIf="email.errors.required" class="danger">Email is required</div>
+        </div>
+
+          </form>
+
+        </div>
+
+      </div>
+      <div class="col-md-3 col-12">
+        <h5>
+          Follow us on
+        </h5>
+        <ul class="list-unstyled social">
+          <li>
+           
+              
+              <fa-icon [icon]="['fab', 'instagram']" size="" (click)="openurl('https://www.instagram.com')" style="margin-right: 20px;color: #000000;"></fa-icon>
+          
+          </li>
+          <li>
+           
+              <fa-icon [icon]="['fab', 'youtube']" size="" (click)="openurl('https://www.youtube.com')" style="margin-right: 20px;color: #000000;"></fa-icon>
+           
+          </li>
+          <li>
+           
+              
+              <fa-icon [icon]="['fab', 'linkedin']" size="" (click)="openurl('https://www.linkedin.com')" style="margin-right: 20px;color: #000000;"></fa-icon>
+          
+          </li>
+          <li>
+          
+              <fa-icon [icon]="['fab', 'facebook-f']" size="" (click)="openurl('https://www.facebook.com')" style="margin-right: 20px;color: #000000;"></fa-icon>
+           
+          </li>
+          <li>
+           
+              <fa-icon [icon]="['fab', 'twitter']" size="" (click)="openurl('https://www.twitter.com')" style="margin-right: 20px;color: #000000;"></fa-icon>
+           
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="copyright">
+  <p>
+    All rights reserved - Link Development Company © 2020
+  </p>
+</div>

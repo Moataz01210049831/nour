@@ -1,0 +1,60 @@
+.footer{
+    background-color: #D9D9D9;
+    padding: 49px 0 28px;
+    ul{
+        li{
+            a{
+                color: #565960;
+                text-decoration: none;
+                font-size: 16px;
+            }
+        }
+    }
+    h5{
+        
+        font-size: 16px;
+        color: #565960;
+        font-weight: 400;
+    }
+    form{
+        input{
+            height: 38px;
+    border-radius: 5px;
+    border: none;
+    padding: 11px 11px;
+    width: 66%;
+        }
+        button{
+            height: 40px;
+    border: none;
+    background-color: #8DC043;
+    color: white;
+    padding: 0px 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+        }
+    }
+
+    .social{
+      
+            display: inline-flex;
+            li{
+                
+                    fa-icon{
+                    color: #565960 !important;
+                    }
+                
+            }
+        
+    }
+    .danger{
+        color: red;
+    }
+}
+.copyright{
+    text-align: center;
+    color: white;
+    background-color: #038896;
+    font-size: 16px;
+    padding: 14px 0px 1px 0px;
+}

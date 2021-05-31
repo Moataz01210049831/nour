@@ -1,0 +1,99 @@
+.last_banner{
+    ul{
+        text-align: right;
+        margin-top: 85px;
+    }
+    .list_two{
+        text-align: center;
+    margin-left: 58px;
+    margin-top: -0px;
+    margin-bottom: 38px;
+    }
+    background: url(../../../assets/images/last_back.png);
+    padding: 5% 0;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: auto;
+    .text{
+        color: white;
+        text-align: center;
+        h4{
+            font-size: 60px;
+        }
+        p{
+            font-size: 30px;
+        }
+    }
+
+    .diamond {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        margin-right: 97px;
+        margin-top: 102px;
+        display: inline-block;
+        .inner-diamond{
+            position: absolute;
+            color: white;
+            top: 19px;
+          p{
+            right: -56px;
+            top: 14px;
+            position: relative;
+          }
+            img{
+                position: relative;
+                right: -55px;
+            }
+            fa-icon{
+                position: relative;
+                top: 46px;
+                right: -34px;
+            }
+        }
+       
+        &::before{
+            position: absolute;
+        display: block;
+        content: "";
+        width: 200px;
+        height: 200px;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        -webkit-transform: rotate(45deg);
+        -webkit-transition: border-color 0.3s;
+        -moz-transform: rotate(45deg);
+        -moz-transition: border-color 0.3s;
+        transform: rotate(45deg);
+        box-shadow: 0px 0px 0px 2px white;
+        transition: all 0.3s;
+       
+        }
+        &:hover:before{
+            background-color:#8DC043;
+        
+        }
+        transition: all 0.3s;
+        
+      }
+  
+     
+     
+      
+}
+
+@media(min-width:768px){
+    .last_banner{
+        background-size: cover;
+        background-repeat: no-repeat;
+        .list_two{
+            margin-left: 113px;
+            margin-top: -77px;
+        }
+        .diamond{
+            margin-top: 25px;
+        }
+    }
+}
